@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css"/>
+		<title>ElectroMan Official Website</title>
+		<script>function banner(){ 
+		var text = confirm("Do you want to see my YouTube channel?"); 
+		return text; 
+		}
+		function answer(){
+		var radio = document.getElementsByName("trivia"); 
+		var selection = false; 
+		var message = "";
+				for(var i = 0; i < radio.length; i++) { 
+				if(radio[i].value == "kcr" && radio[i].checked == true) {
+				selection = true;
+				}
+			} if(selection == true) {
+				message = message + "<b><p style='color:green'>Way To Go!</p></b>"
+			} else {
+				message = message + "<b><p style='color:red'>Try Again!</p></b>"}
+				document.getElementById("response").innerHTML = message;
+		}</script>
+	</head>
+	<body id="background">
+		<h1>This is the official website of the ElectroMan YouTube channel.</h1>
+			<p class="Opening">My website was created off of my YouTube channel.
+			Click on any of the tabs below to access the forums, downloads, and the ElectroMan Store.
+			</p>
+		<header><img src="https://img3.banggood.com/thumb/view/oaupload/banggood/images/0E/03/696fb52d-dcf7-4dae-a95f-571c6076022a.jpg"/></header>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/Y7fzOiwVaGI?rel=0" frameborder="0" allowfullscreen></iframe>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/c1DZhr2k4to" frameborder="0" allowfullscreen></iframe>
+			<a href="https://www.youtube.com/channel/UCc2Eqr2LyZUz8qkFYaDEqpw" onclick="return banner()"/><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Plasma_globe_23s.webm/220px--Plasma_globe_23s.webm.jpg"/>
+			<div class="list">
+			<nav>
+				<ul id="menu">
+					<li class="item"><a href="forums.html">Forums</a></li>
+					<li class="item"><a href="downloads.html">Downloads</a></li>
+					<li class="item"><a href="store.html">Store</a></li>
+				</ul>
+		    </nav>
+			</div>
+				<div class="Trivia">
+				<h2>Computer Trivia Question</h2>
+					<p class="Question">Which component is considered the "brain" of the PC? Select One</p>
+					<form>
+						<div id="response"></div>
+						<input type="radio" name="Motherboard" value="Incorrect"/>Motherboard<br>
+						<input type="radio" name="Hard Drive" value="Incorrect"/>Hard Drive<br>
+						<input type="radio" name="CPU" value="Correct"/>CPU<br>
+						<input type="radio" name="Video Card" value="Incorrect"/>Video Card<br>
+						<input id="submit" type="button" value="Submit Answer" onclick="answer()"/>
+					</form>
+				</div>
+						<hr>
+		<footer>Copyright (c) 2017 ElectroMan</footer>
+	</body>
+</html>
+						
